@@ -1,10 +1,10 @@
 class Card
-    attr_reader :category
+    attr_reader :category, :answer, :question
     def initialize(question, answer, category)
         @question = question
         @answer = answer
         @category = category
-    end
+    end        
 end
 
-Card.new
+card = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
