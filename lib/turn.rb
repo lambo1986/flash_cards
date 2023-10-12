@@ -1,3 +1,4 @@
+require "./lib/card"
 class Turn
     attr_reader :card, :guess
     def initialize(string, card)
@@ -7,7 +8,7 @@ class Turn
 
     def correct?
         if guess == "Juneau"
-             true
+            true
         else 
             false
         end
@@ -15,11 +16,15 @@ class Turn
 
     def feedback
         if guess == "Juneau"
-             "Correct!!"
+            "Correct!!"
         else
-             "Incorrect."
+            "Incorrect."
         end
     end
 end
+
+card1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
+turn = Turn.new("Kodiak", card1)
+turn.correct?
 
 
