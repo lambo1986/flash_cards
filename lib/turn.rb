@@ -23,8 +23,6 @@ class Turn
     end
 end
 
-card1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-turn = Turn.new("Kodiak", card1)
-turn.correct?
+
 
 

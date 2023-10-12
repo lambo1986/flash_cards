@@ -1,8 +1,17 @@
-
+require "./lib/card"
+require "./lib/turn"
+require "./lib/deck"
 class Round
-  attr_reader :deck, :turns, :current_card
+  attr_reader :deck, :turns
   def initialize(deck)
     @deck = deck
     @turns = []
   end
+
+  def current_card
+   
+  end
+
 end
+
+  

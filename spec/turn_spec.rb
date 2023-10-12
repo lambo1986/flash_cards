@@ -9,20 +9,26 @@ RSpec.describe Turn do
   end
 
   it "has a card" do
-    turn = Turn.new("Kodiak", :card)
+    turn = Turn.new("Juneau", :card)
   
     expect(turn.card).to eq(:card)
   end
 
   it "has a guess" do
-    turn = Turn.new("Kodiak", :card)
+    turn = Turn.new("Juneau", :card)
 
-    expect(turn.guess).to eq("Kodiak")
+    expect(turn.guess).to eq("Juneau")
   end
 
   it "checks the guess against answer" do
-    turn = Turn.new("Kodiak", :card)
+    turn = Turn.new("Juneau", :card)
     card1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
-    
+    expect(turn.correct?).to be true
+  end
+
+  it "returns string based on boolean" do
+    turn = Turn.new("Juneau", :card)
+    card1 = Card.new("What is the capital of Alaska?", "Juneau", :Geography)
+    expect(turn.feedback).to eq("Correct!!")
   end
 end
